@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const DrumPad = ({ sound }) => {
+  const [classes, setClasses] = useState('drum-pad');
   const audio = new Audio(sound.audioUrl);
 
   const playSound = () => {
@@ -11,8 +12,12 @@ const DrumPad = ({ sound }) => {
 
   const keypressed = (e) => {
     if (e.key === sound.key.toLowerCase()) {
+      setClasses('drum-pad active');
+      console.log('nani');
+      console.log(e);
       playSound();
     }
+    setTimeout(() => setClasses('drum-pad'), 100);
   };
 
   useEffect(() => {
@@ -22,7 +27,7 @@ const DrumPad = ({ sound }) => {
   }, []);
 
   return (
-    <div onClick={() => playSound()} className="drum-pad" id={sound.name}>
+    <div onClick={() => playSound()} className={classes} id={sound.name}>
       <p>{sound.key}</p>
     </div>
   );
