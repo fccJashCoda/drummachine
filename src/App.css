@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.drum-pad {
+  cursor: pointer;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+.drum-pad:hover {
+  background: #333;
+  color: #fff;
+}
+
+.drum-pad:active {
+  background: #333;
+  color: #fff;
+}
