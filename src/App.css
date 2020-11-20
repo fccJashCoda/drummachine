@@ -38,6 +38,7 @@
 }
 
 .drum-pad {
+  display: block;
   cursor: pointer;
   padding: 1em;
   border: 1px solid black;
