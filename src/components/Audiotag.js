@@ -4,6 +4,7 @@ const DrumPad = ({ sound, action }) => {
   const [classes, setClasses] = useState('drum-pad');
 
   const playSound = () => {
+    action(sound.name);
     const audio = document.getElementById(sound.key);
     audio.currentTime = 0;
     audio.volume = 0.1;
@@ -14,12 +15,8 @@ const DrumPad = ({ sound, action }) => {
     if (e.key.toUpperCase() === sound.key) {
       setClasses('drum-pad active');
       playSound();
-      action(sound.name);
     }
-    setTimeout(() => {
-      setClasses('drum-pad');
-      action('');
-    }, 100);
+    setTimeout(() => setClasses('drum-pad'), 100);
   };
 
   useEffect(() => {

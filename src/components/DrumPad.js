@@ -13,8 +13,6 @@ const DrumPad = ({ sound }) => {
   const keypressed = (e) => {
     if (e.key === sound.key.toLowerCase()) {
       setClasses('drum-pad active');
-      console.log('nani');
-      console.log(e);
       playSound();
     }
     setTimeout(() => setClasses('drum-pad'), 100);

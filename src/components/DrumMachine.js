@@ -1,4 +1,5 @@
 import DrumPad from './DrumPad';
+import Display from './Display';
 import Audiotag from './Audiotag';
 import { v4 as uuid } from 'uuid';
 import { useState } from 'react';
@@ -7,55 +8,55 @@ const audioBank = [
   {
     id: uuid(),
     key: 'Q',
-    name: 'header-1',
+    name: 'header 1',
     audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
   },
   {
     id: uuid(),
     key: 'W',
-    name: 'header-2',
+    name: 'header 2',
     audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3 ',
   },
   {
     id: uuid(),
     key: 'E',
-    name: 'header-3',
+    name: 'header 3',
     audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3',
   },
   {
     id: uuid(),
     key: 'A',
-    name: 'header-4_1',
+    name: 'header 4_1',
     audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3',
   },
   {
     id: uuid(),
     key: 'S',
-    name: 'header-6',
+    name: 'header 6',
     audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3',
   },
   {
     id: uuid(),
     key: 'D',
-    name: 'dsc-oh',
+    name: 'dsc oh',
     audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3 ',
   },
   {
     id: uuid(),
     key: 'Z',
-    name: 'kick-n-hat',
+    name: 'kick n hat',
     audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3 ',
   },
   {
     id: uuid(),
     key: 'X',
-    name: 'kick-1',
+    name: 'kick 1',
     audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3 ',
   },
   {
     id: uuid(),
     key: 'C',
-    name: 'cev-h2',
+    name: 'cev h2',
     audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3',
   },
   // {
@@ -124,12 +125,14 @@ const DrumMachine = () => {
 
   console.log(display);
   return (
-    <div id="display">
-      <h1>{display}</h1>
+    // <div id="display">
+    <div>
       {audioBank.map((element) => (
         // <DrumPad key={element.id} sound={element} />
         <Audiotag key={element.id} sound={element} action={handleDisplay} />
       ))}
+      {/* <Display text={display} /> */}
+      <p id="display">{display}</p>
     </div>
   );
 };
