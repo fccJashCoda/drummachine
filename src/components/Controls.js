@@ -1,26 +1,26 @@
 import { useState } from 'react';
+import Display from './Display';
 
-const Controls = () => {
-  const [volume, setVolume] = useState(20);
-  const [on, setOn] = useState(true);
-
+const Controls = ({ display, volume, power, adjustVolume, managePower }) => {
   return (
     <>
-      <input
-        type="range"
-        min={0}
-        max={100}
-        value={volume}
-        onChange={(e) => setVolume(e.target.value)}
-      />
-      <input
-        type="checkbox"
-        checked={on}
-        onChange={() => {
-          setOn(!on);
-        }}
-      />
-      <p>{volume}</p> {on && <p>On</p>}
+      <label>
+        Volume
+        <input
+          type="range"
+          min={0}
+          max={1}
+          step={0.01}
+          value={volume}
+          onChange={(e) => adjustVolume(e.target.value)}
+        />
+      </label>
+      <label>
+        On/Off
+        <input type="checkbox" checked={power} onChange={managePower} />
+      </label>
+      {power && <p>On</p>}
+      <Display display={display} />
     </>
   );
 };

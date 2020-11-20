@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 
-const DrumPad = ({ sound, action }) => {
+const DrumPad = ({ sound, action, volume }) => {
   const [classes, setClasses] = useState('drum-pad');
 
   const playSound = () => {
+    console.log('trigger', volume);
     action(sound.name);
     const audio = document.getElementById(sound.key);
+    audio.volume = volume;
     audio.currentTime = 0;
-    audio.volume = 0.1;
     audio.play();
   };
 
@@ -23,7 +24,7 @@ const DrumPad = ({ sound, action }) => {
     document.addEventListener('keydown', keypressed);
 
     return () => document.removeEventListener('keydown', keypressed);
-  }, []);
+  }, [volume]);
 
   return (
     <div className={classes} id={sound.name} onClick={playSound}>
