@@ -58,61 +58,6 @@ const audioBank = [
     name: 'Snare',
     audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3 ',
   },
-  // {s
-  //   id: uuid(),
-  //   key: 'Q',
-  //   name: 'header 1',
-  //   audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
-  // },
-  // {
-  //   id: uuid(),
-  //   key: 'W',
-  //   name: 'header 2',
-  //   audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3 ',
-  // },
-  // {
-  //   id: uuid(),
-  //   key: 'E',
-  //   name: 'header 3',
-  //   audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3',
-  // },
-  // {
-  //   id: uuid(),
-  //   key: 'A',
-  //   name: 'header 4_1',
-  //   audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3',
-  // },
-  // {
-  //   id: uuid(),
-  //   key: 'D',
-  //   name: 'dsc oh',
-  //   audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3 ',
-  // },
-  // {
-  //   id: uuid(),
-  //   key: 'C',
-  //   name: 'cev h2',
-  //   audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3',
-  // },
-  // {
-  //   id: uuid(),
-  //   key: 'C',
-  //   name: 'give-us-a-light',
-  //   audioUrl:
-  //     'https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3 ',
-  // },
-  // {
-  //   id: uuid(),
-  //   key: '',
-  //   name: 'dry-ohh',
-  //   audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3',
-  // },
-  // {
-  //   id: uuid(),
-  //   key: '',
-  //   name: 'bld-h1',
-  //   audioUrl: 'https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3',
-  // },
 ];
 
 const DrumMachine = () => {

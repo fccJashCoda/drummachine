@@ -53,3 +53,31 @@ code {
   display: flex;
   flex-flow: wrap;
 }
+
+#controls {
+  background: red;
+}
+#volumeSlider {
+  background: green;
+}
+#powerSwitch {
+  background: blue;
+}
+#powerLed {
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.powerOn {
+  background: lime;
+}
+.powerOff {
+  background: white;
+}
+#display {
+  background: orange;
+  display: block;
+  height: 4em;
+  width: 4em;
+}

@@ -1,10 +1,9 @@
-import { useState } from 'react';
 import Display from './Display';
 
 const Controls = ({ display, volume, power, adjustVolume, managePower }) => {
   return (
-    <>
-      <label>
+    <div id="controls">
+      <label htmlFor="volume" id="volumeSlider">
         Volume
         <input
           type="range"
@@ -13,15 +12,21 @@ const Controls = ({ display, volume, power, adjustVolume, managePower }) => {
           step={0.01}
           value={volume}
           onChange={(e) => adjustVolume(e.target.value)}
+          id="volume"
         />
       </label>
-      <label>
+      <label htmlFor="power" id="powerSwitch">
         On/Off
-        <input type="checkbox" checked={power} onChange={managePower} />
+        <input
+          type="checkbox"
+          checked={power}
+          onChange={managePower}
+          id="power"
+        />
       </label>
-      {power && <p>On</p>}
-      <Display display={display} />
-    </>
+      <div id="powerLed" className={power ? 'powerOn' : 'powerOff'}></div>
+      <Display display={power ? display : ''} />
+    </div>
   );
 };
 
