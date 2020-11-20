@@ -1,6 +1,6 @@
-import DrumPad from './DrumPad';
 import Display from './Display';
 import Audiotag from './Audiotag';
+import Controls from './Controls';
 import { v4 as uuid } from 'uuid';
 import { useState } from 'react';
 
@@ -125,14 +125,13 @@ const DrumMachine = () => {
 
   console.log(display);
   return (
-    // <div id="display">
-    <div>
+    <div id="drum-machine">
       {audioBank.map((element) => (
-        // <DrumPad key={element.id} sound={element} />
         <Audiotag key={element.id} sound={element} action={handleDisplay} />
       ))}
-      {/* <Display text={display} /> */}
-      <p id="display">{display}</p>
+      {/* <p id="display">{display}</p> */}
+      <Display display={display} />
+      <Controls />
     </div>
   );
 };

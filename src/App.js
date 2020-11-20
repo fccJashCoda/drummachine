@@ -1,9 +1,9 @@
-import './App.css';
+// import './App.scss';
 import DrumMachine from './components/DrumMachine';
 
 function App() {
   return (
-    <div className="App" id="drum-machine">
+    <div className="App">
       <DrumMachine />
     </div>
   );
