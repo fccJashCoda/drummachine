@@ -79,7 +79,7 @@ const DrumMachine = () => {
 
   return (
     <div id="drum-machine">
-      <div id="soundboard">
+      <div id="soundboard" className={power ? 'powered' : ''}>
         {audioBank.map((element) => (
           <Audiotag
             key={element.id}

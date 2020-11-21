@@ -3,9 +3,9 @@ import Display from './Display';
 const Controls = ({ display, volume, power, adjustVolume, managePower }) => {
   return (
     <div id="controls">
-      <Display display={power ? display : ''} />
+      <Display display={power ? display : ''} power={power} />
       <div id="control-unit">
-        <label htmlFor="volume" id="volumeSlider">
+        <label htmlFor="volume" id="volumeControl">
           Vol.
           <input
             type="range"
@@ -15,6 +15,8 @@ const Controls = ({ display, volume, power, adjustVolume, managePower }) => {
             value={volume}
             onChange={(e) => adjustVolume(e.target.value)}
             id="volume"
+            // className="volumeSlider"
+            className={`volumeSlider ${power ? 'powered' : ''}`}
           />
         </label>
         <label htmlFor="power" id="powerSwitch">
