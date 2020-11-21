@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
 
-const DrumPad = ({ sound, action, volume }) => {
+const Audiotag = ({ sound, action, volume }) => {
   const [classes, setClasses] = useState('drum-pad');
 
   const playSound = () => {
-    console.log('trigger', volume);
     action(sound.name);
     const audio = document.getElementById(sound.key);
     audio.volume = volume;
@@ -40,4 +39,4 @@ const DrumPad = ({ sound, action, volume }) => {
   );
 };
 
-export default DrumPad;
+export default Audiotag;

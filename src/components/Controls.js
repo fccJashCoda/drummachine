@@ -15,7 +15,6 @@ const Controls = ({ display, volume, power, adjustVolume, managePower }) => {
             value={volume}
             onChange={(e) => adjustVolume(e.target.value)}
             id="volume"
-            // className="volumeSlider"
             className={`volumeSlider ${power ? 'powered' : ''}`}
           />
         </label>
